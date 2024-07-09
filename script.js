@@ -1,9 +1,11 @@
+//Objeto Atividade
 const atividade = {
   name: "Almoço",
   date: new Date("2024-07-08 22:40"),
   finish: true
 }
 
+//Lista de Atividades
 let atividades = [
   atividade,
   { 
@@ -18,15 +20,16 @@ let atividades = [
 }
 ]
 
+//Arrow Function
 const criarItemAtividades = (atividade) => {
 
   let input = '<input type="checkbox" ' //criada variavel para o input checkbox
 
   if (atividade.finish) { //Se a atividade estiver finalizada, adiciona o checked 
-    input = input + 'checked'
+    input +=  'checked'
   }
 
-  input = input + '>' //em determinado momento, pegará meu input e ira fechar a tag
+  input += '>' //em determinado momento, pegará meu input e ira fechar a tag  (+= concatena o valor alterior, ex: input = input + '>')
 
   return `
      <div>
