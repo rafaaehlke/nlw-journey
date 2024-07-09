@@ -6,31 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciador de Viagem</title>
   <link rel="stylesheet" href="style.css">
-  <script src="/script.js"  defer type="module"></script>
+  <script src="/script.js" defer type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+  <script>dayjs.locale('pt-br')</script>
 </head>
 
 <body>
 
-  <!-- <header></header>
 
-    <form action="">
-      <div>
-        <input type="text" name="" id="" placeholder="Qual a atividade?">
-      </div>
-      
-      <input type="date" name="" id="">
-      <div>
 
-        <div>
-          <input type="time" name="" id="">
-        </div>
+  <form onsubmit="salvarAtividade(event)">
+    <div>
+      <input type="text" name="atividade" placeholder="Qual a atividade?">
+    </div>
 
-        <button>Salvar Atividade</button>
-    </form> -->
+    <div>
+      <select name="dia">
+        <option value="2024-07-09">09 de julho</option>
+      </select>
+    </div>
+
+    <div>
+      <select name="hora">
+        <option value="10:30">10:30</option>
+      </select>
+    </div>
+
+    <button>Salvar Atividade</button>
+  </form>
+
+  <main>
     <h1>Atividades</h1>
-  <section>
- 
-  </section>
+    <section> </section>
+
+  </main>
 </body>
 
 </html>
