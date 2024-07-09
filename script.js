@@ -11,11 +11,16 @@ let atividades = [
   { 
     name: 'Academia em Grupo',
     date: new Date('2024-07-09 10:00'),
-    finish: false
+    finish: true
   },
 {
-  name: 'Game Session',
+  name: 'Gaming Session',
   date: new Date('2024-07-09 22:00'),
+  finish: true,
+},
+{
+  name: 'Jantar',
+  date: new Date('2024-07-09 23:00'),
   finish: false,
 }
 ]
