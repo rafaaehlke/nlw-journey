@@ -18,7 +18,13 @@ option {font-size: 1.6rem;
 
 :root {
   font-size: 62.5%;
- 
+  --bg-color: hsl(240, 10%, 4%);
+  --input-border-color: hsl(240, 4%, 16%);
+  --bg-secondary: hsl(80, 61%, 50%);
+  --bg-button: hsl(82, 85%, 67%);
+  --card-bg: hsl(240, 6%, 10%);
+  --txt-color-btn: hsl(89, 80%, 10%); 
+  --txt-color-time: hsl(240, 6%, 65%);
 }
 
 #app {
@@ -55,8 +61,8 @@ button {
 
 .field-wrapper {
   padding: 1rem 1.6rem;
-  background-color: #09090B;
-  border: 1px solid #27272A;
+  background-color: var(--bg-color);
+  border: 1px solid var(--input-border-color);
   border-radius: .8rem;
 
   display: flex;
@@ -65,7 +71,7 @@ button {
 }
 
 .field-wrapper:focus-within {
-  outline: .2rem solid yellowgreen;
+  outline: .2rem solid var(--bg-secondary);
 }
 
 button {
@@ -73,19 +79,19 @@ button {
   border: none;
   padding: 1.2rem 2.0rem;
   border-radius: .8rem;
-  background-color: #BEF264;
+  background-color: var(--bg-button);
 
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.02em;
 
-  color: #1A2E05;
+  color: var(--txt-color-btn);
 
 
 }
 
 .card-bg {
-  background: #18181B;
+  background: var(--card-bg);
   box-shadow: 0px 8px 8px 
   rgba(0, 0, 0, 0.1), 0px 4px 4px
   rgba(0, 0, 0, 0.1), 0px 2px 2px
@@ -146,7 +152,7 @@ section .card-bg > div {
 
 time {
   font-size: 1.4rem;
-  color: #a1a1ab;
+  color: var(--txt-color-time);
   text-align: right;
 }
 

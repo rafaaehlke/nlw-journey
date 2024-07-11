@@ -37,7 +37,7 @@ let atividades = [
   },
 ]
 
-// atividades = []
+atividades = [] //deixa a lista de atividades fazia, fazendo com que o usuario adicione a sua lista
 
 //Arrow Function
 const criarItemAtividades = (atividade) => {
