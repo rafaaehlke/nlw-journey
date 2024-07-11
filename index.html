@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciador de Viagem</title>
@@ -10,39 +11,48 @@
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
   <script>dayjs.locale('pt-br')</script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <form onsubmit="salvarAtividade(event)">
+  <div id="app">
+    <form onsubmit="salvarAtividade(event)">
 
-    <div>
-      <input
-       type="text"
-       placeholder="Qual a atividade?"
-       name="atividade"
-       required>
-    </div>
+      <div id="place" class="card-bg">
+        <img src="./assets/pin.svg" alt="">
+        Florianopolis, SC
+      </div>
 
-    <div>
-      <select name="dia">
-        <option value="2024-07-09">09 de julho</option>
-      </select>
-    </div>
+      <div class="fieldset">
+        <div class="field-wrapper">
+          <img src="./assets/tag.svg" alt="">
+          <input type="text" placeholder="Qual a atividade?" name="atividade" required>
+        </div>
 
-    <div>
-      <select name="hora">
-        <option value="10:30">10:30</option>
-      </select>
-    </div>
+        <div class="field-wrapper">
+          <img src="./assets/calendario.svg" alt="">
+          <select name="dia">
+            <option value="2024-07-09">09 de julho</option>
+          </select>
+        </div>
 
-    <button>Salvar Atividade</button>
-  </form>
+        <div class="field-wrapper">
+          <img src="./assets/relogio.svg" alt="">
+          <select name="hora">
+            <option value="10:30">10:30</option>
+          </select>
+        </div>
+      </div>
+      <button>Salvar Atividade</button>
+    </form>
 
-  <main>
-    <h1>Atividades</h1>
-    <section> </section>
+    <main>
+      <h1>Atividades</h1>
+      <section></section>
 
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>

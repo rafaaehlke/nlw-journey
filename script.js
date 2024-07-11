@@ -62,10 +62,21 @@ const criarItemAtividades = (atividade) => {
   const formatar = formatador(atividade.date)
 
   return `
-     <div>
+     <div class="card-bg">
       ${input}
+      <div>
+        <img class="active" src="./assets/checked.svg">
+        <img class="inative" src="./assets/notchecked.svg">
+      </div>
       <span>${atividade.name}</span>
-      <time>
+
+      <time class="short">
+      ${formatar.dia.semana.curto}, 
+      dia ${formatar.dia.numerico}<br>
+       ${formatar.hora}
+      </time>
+
+      <time class="full">
       ${formatar.dia.semana.longo}, 
       dia ${formatar.dia.numerico} 
       de ${formatar.mes}
@@ -175,14 +186,14 @@ criarHorasSelecao()
   const input = event.target
   const dataDoInput = input.value
   
-
+    //arrow function para procurar a nova atividades dentro de atividade
    const atividade = atividades.find((atividade) => {
     return atividade.date == dataDoInput
    })
 
    if(!atividade) {
-    return
+    return //toda vez que encontrada um return na funcao, ela cancela e
   }
 
-   atividade.finish = !atividade.finish 
+   atividade.finish = !atividade.finish //verifica se antes era verdadeiro e se tornou falso e parmanece o ultimo
 }
