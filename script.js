@@ -24,11 +24,7 @@ const atividade = {
 //Lista de Atividades
 let atividades = [
   atividade,
-  {
-    name: 'Academia em Grupo',
-    date: new Date('2024-07-09 10:00'),
-    finish: false
-  },
+  
   {
     name: 'Gaming Session',
     date: new Date('2024-07-09 22:00'),
